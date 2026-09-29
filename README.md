@@ -19,8 +19,12 @@ para um clone novo sem os antigos binários, use `git clone --depth 1`.
 
 O runtime inclui `wmu.exe`, DLLs necessárias, `client.toml`, `keys.toml`,
 `assets/`, `data/`, `game/Data/`, `licenses/` e `release-manifest.json`.
-São 3.592 arquivos na versão 0.1.0. Código-fonte, ferramentas, arquivos de
+São 3.592 arquivos na versão 0.1.1. Código-fonte, ferramentas, arquivos de
 autoria, símbolos de depuração e executáveis legados não entram no ZIP.
+
+O client 0.1.1 é uma compilação Release x64 com subsistema gráfico Windows:
+abre somente a janela do jogo, sem console de logs. O empacotador verifica
+essa propriedade no próprio executável antes de aceitar uma nova versão.
 
 ## Conexão com o servidor
 
@@ -45,9 +49,9 @@ No workspace privado `wmu`, com Python 3.11+:
 2. Gere manifesto e ZIP com uma versão e tag novas:
 
 ```powershell
-python client/scripts/releasefiles.py create downloads/client/windows-x64 --platform windows-x64 --version 0.1.1
-python launcher/scripts/packageclient.py --version 0.1.1 --release-url https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.1.1 --output downloads/releases/client-0.1.1
-Copy-Item downloads/releases/client-0.1.1/feed.json downloads/feed.json
+python client/scripts/releasefiles.py create downloads/client/windows-x64 --platform windows-x64 --version 0.1.2
+python launcher/scripts/packageclient.py --version 0.1.2 --release-url https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.1.2 --output downloads/releases/client-0.1.2
+Copy-Item downloads/releases/client-0.1.2/feed.json downloads/feed.json
 ```
 
 Use `--allow-local-server` no empacotador para distribuir intencionalmente
@@ -62,7 +66,7 @@ powershell -File launcher/scripts/build.ps1
 4. Publique com o commit completo de `downloads` já enviado ao GitHub:
 
 ```powershell
-python launcher/scripts/githubrelease.py --directory downloads/releases/client-0.1.1 --tag client-v0.1.1 --commit COMMIT_COMPLETO --notes downloads/release-notes.md --launcher launcher/dist/launcher/wmu-launcher.exe
+python launcher/scripts/githubrelease.py --directory downloads/releases/client-0.1.2 --tag client-v0.1.2 --commit COMMIT_COMPLETO --notes downloads/release-notes.md --launcher launcher/dist/launcher/wmu-launcher.exe
 ```
 
 O publicador usa seu login do Git, cria um rascunho, envia ZIP, checksum, feed
