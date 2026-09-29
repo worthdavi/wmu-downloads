@@ -1,17 +1,16 @@
-WMU Client 0.1.1 para Windows x64, com Launcher 0.2.0.
+WMU Client 0.1.2 para Windows x64, com Launcher 0.2.0.
 
-- Client recompilado em Release x64 como aplicação gráfica do Windows.
-- Abrir o jogo, pelo launcher ou diretamente, não abre mais um console de logs.
-- O empacotador agora rejeita executáveis de console antes da publicação.
-- Assets, configurações de servidor e controles do launcher preservados.
+- O servidor padrão passa a ser o Fly.io em 137.66.42.155.
+- Um canal de jogo, com conexão TLS e certificado público incluído.
+- A opção Localhost continua disponível no launcher.
+- Client Release x64, sem console de debug; assets preservados.
 
-Abra o launcher para atualizar automaticamente para o client 0.1.1 ou clique
+Abra o launcher para atualizar automaticamente para o client 0.1.2 ou clique
 em Procurar atualizações. O launcher 0.2.0 continua compatível; não precisa
 ser baixado novamente. O updater baixa o ZIP completo da nova versão.
 
-Verificados: cabeçalho PE de aplicação gráfica, janela SDL/D3D12 real sem
-console associado e conexão ao endereço selecionado no launcher.
+Use Servidor → Padrão do jogo para acessar o Fly.io. Caso tenha escolhido
+Localhost ou Meu servidor antes, essa escolha permanece salva.
 
-O jogo vem configurado para localhost. Para acessar outro servidor, use
-Servidor → Meu servidor. O servidor precisa estar disponível e com TLS
-configurado; login e gameplay online ainda não foram qualificados.
+O banco do servidor começa vazio, sem importar contas e personagens locais.
+Login e gameplay com jogadores ainda precisam de validação.
