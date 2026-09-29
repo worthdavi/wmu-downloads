@@ -1,16 +1,19 @@
-WMU Client 0.1.2 para Windows x64, com Launcher 0.2.0.
+WMU Client 0.2.0 para Windows x64.
 
-- O servidor padrão passa a ser o Fly.io em 137.66.42.155.
-- Um canal de jogo, com conexão TLS e certificado público incluído.
-- A opção Localhost continua disponível no launcher.
-- Client Release x64, sem console de debug; assets preservados.
+- Conexão com o servidor Go pelo novo protocolo WMU3 sobre TLS 1.3.
+- Servidor padrão em server.wmu.life, com certificado público incluído.
+- Atualização de mundo, personagens, inventário, loja, baú, grupos e comércio.
+- Client Release x64, sem console de debug; assets existentes preservados.
 
-Abra o launcher para atualizar automaticamente para o client 0.1.2 ou clique
-em Procurar atualizações. O launcher 0.2.0 continua compatível; não precisa
-ser baixado novamente. O updater baixa o ZIP completo da nova versão.
+Abra o launcher para baixar o client 0.2.0 automaticamente ou clique em
+Procurar atualizações. Não é necessário baixar o launcher novamente.
+O updater verifica SHA-256 e instala o ZIP completo da nova versão.
 
-Use Servidor → Padrão do jogo para acessar o Fly.io. Caso tenha escolhido
-Localhost ou Meu servidor antes, essa escolha permanece salva.
+Use Servidor → Padrão do jogo para acessar o servidor público. A escolha
+anterior de Localhost ou Meu servidor permanece salva; esses destinos também
+precisam executar o servidor Go compatível com WMU3.
 
-O banco do servidor começa vazio, sem importar contas e personagens locais.
-Login e gameplay com jogadores ainda precisam de validação.
+Login, personagens, movimentação, renderização, HUD, comércio, grupo, baú,
+loja e persistência foram validados em integração isolada com o servidor Go.
+Os 26 assets customizados MuAwaY que já faltavam na distribuição anterior
+continuam pendentes; os demais assets foram mantidos sem alterações.
