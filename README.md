@@ -1,95 +1,88 @@
 # WMU downloads
 
-Repositório público dos arquivos distribuíveis do WMU para Windows x64.
-Os fontes, ferramentas de desenvolvimento e arquivos de autoria ficam no
-repositório privado do client.
-
-## Download
-
 Baixe [wmu-launcher.exe](https://github.com/worthdavi/wmu-downloads/releases/latest/download/wmu-launcher.exe)
-e abra. O launcher baixa e valida os arquivos do client automaticamente;
-nas próximas aberturas, verifica se há uma versão nova. Os botões permitem
-procurar atualizações, reparar os arquivos e iniciar o jogo.
+e abra. O launcher instala, verifica e atualiza o client automaticamente.
+Windows x64; o jogador não precisa de Git ou ferramentas de desenvolvimento.
 
-## Estado atual
+## Organização
 
-O diretório `client/windows-x64` contém o executável Release, DLLs necessárias,
-interface, modelos próprios, configurações, fontes tipográficas e licenças.
-O manifesto `release-manifest.json` registra tamanho e SHA-256 de cada arquivo.
-Os bytes dos arquivos do runtime são preservados pelo `.gitattributes`.
+A branch contém documentação e uma cópia de referência do `feed.json`.
+ZIPs e executáveis são anexos das [Releases](https://github.com/worthdavi/wmu-downloads/releases).
+O launcher consulta o **feed anexado à última Release**, baixa um ZIP completo
+e verifica SHA-256 antes de instalar; não baixa arquivo por arquivo pelo Git.
+Um commit/push sozinho não publica uma atualização.
 
-**Client 0.1.0:** 3.592 arquivos de runtime, incluindo os recursos de
-personagens, mapas, monstros, imagens e sons em `client/windows-x64/game/Data`.
-O ZIP, seu SHA-256, `feed.json` e o launcher são anexos da Release `client-v0.1.0`.
+`client/windows-x64/` e `releases/` são pastas locais ignoradas pelo Git.
+A primeira contém o runtime de trabalho; a segunda, os pacotes para upload.
+Os arquivos locais foram preservados. O histórico antigo continua intacto;
+para um clone novo sem os antigos binários, use `git clone --depth 1`.
 
-A conexão de jogo desta primeira versão usa `127.0.0.1` (servidor local).
-O download e a atualização funcionam pela internet; entrar no jogo depende
-de um servidor em execução no endereço configurado. Nenhum endereço público
-de servidor de jogo foi fornecido. A inicialização D3D12 e os testes do acervo
-passaram; login e gameplay online não foram qualificados.
+O runtime inclui `wmu.exe`, DLLs necessárias, `client.toml`, `keys.toml`,
+`assets/`, `data/`, `game/Data/`, `licenses/` e `release-manifest.json`.
+São 3.592 arquivos na versão 0.1.0. Código-fonte, ferramentas, arquivos de
+autoria, símbolos de depuração e executáveis legados não entram no ZIP.
 
-## Estrutura
+## Conexão com o servidor
 
-```text
-client/windows-x64/
-  wmu.exe                 executável do client reescrito
-  *.dll                   SDL3 e runtime Microsoft Visual C++
-  assets/                 imagens e modelos próprios utilizados pelo client
-  data/                   interface, tabelas, idioma, fontes e CA pública
-  client.toml             configuração da janela e conexão
-  keys.toml               teclas
-  game/Data/              recursos de personagens, mapas, monstros e sons
-  licenses/               avisos de dependências
-  release-manifest.json   integridade dos arquivos
-```
+No launcher 0.2.0, clique em **Servidor** no rodapé:
 
-`main.exe`, DLLs do client legado, `src`, `source`, PDBs e arquivos Blender
-não fazem parte da distribuição. `client/data` e `client/assets` do projeto
-privado continuam sendo entradas de build; os arquivos aqui são a exportação
-para distribuição. Editar uma exportação não altera os fontes privados.
+- **Padrão do jogo:** usa a configuração distribuída (atualmente localhost).
+- **Localhost:** usa `127.0.0.1`, conexão `44405` e porta base do jogo `55901`.
+- **Meu servidor:** informe IP/domínio, portas e, se necessário, a CA pública.
 
-## Preparar uma próxima atualização
+A escolha persiste em `%LOCALAPPDATA%/WMU/server-settings.json`, sobrevive a
+atualizações/reparo e vale na próxima abertura do jogo. Os canais preservam
+seus deslocamentos de porta. O servidor precisa estar acessível e anunciar
+endereços corretos; o launcher não cria um servidor de jogo. A validação TLS
+permanece ativa. Login e gameplay online ainda não foram qualificados.
 
-1. Exportar a nova compilação do client, preservando a pasta de recursos
-   `client/windows-x64/game/Data` e as configurações revisadas da distribuição.
-2. Configurar o host público em `client/windows-x64/client.toml` e os hosts
-   do diretório e de todos os canais em `client/windows-x64/data/ui/servers.toml`.
-   Incluir a CA pública correta em `client/windows-x64/data/network/ca.pem`;
-   a chave privada do servidor nunca pertence a este repositório.
-3. Validar o client real com esses assets e com o servidor acessível.
-4. No workspace de desenvolvimento `wmu`, com Python 3.11+ disponível,
-   gerar o manifesto da configuração revisada e o pacote:
+## Publicar uma atualização do client
+
+No workspace privado `wmu`, com Python 3.11+:
+
+1. Exporte a nova compilação para `downloads/client/windows-x64`, preservando
+   os assets necessários. Revise as configurações e teste o jogo.
+2. Gere manifesto e ZIP com uma versão e tag novas:
 
 ```powershell
 python client/scripts/releasefiles.py create downloads/client/windows-x64 --platform windows-x64 --version 0.1.1
 python launcher/scripts/packageclient.py --version 0.1.1 --release-url https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.1.1 --output downloads/releases/client-0.1.1
+Copy-Item downloads/releases/client-0.1.1/feed.json downloads/feed.json
 ```
 
-Não regenere o manifesto para encobrir corrupção; esse comando é para uma
-nova versão cujas alterações de arquivos foram revisadas. O empacotador
-recusa runtime adulterado, assets ausentes e endereços locais. Para distribuição
-explícita de testes com servidor local, como a 0.1.0, use `--allow-local-server`.
+Use `--allow-local-server` no empacotador para distribuir intencionalmente
+uma configuração local. Não regenere manifestos para encobrir corrupção.
 
-5. Fazer commit/push do runtime atualizado. Criar uma Release no GitHub com
-   tag `client-v0.1.1`, anexar **todos os três** arquivos de `releases/client-0.1.1`
-   (ZIP, SHA-256 e `feed.json`) e só então
-   publicar como latest. O ZIP e o feed são anexos da Release, não um commit
-   de arquivos ZIP na branch. O upload deve terminar antes da publicação.
-6. Compilar o launcher no workspace privado:
+3. Atualize as notas, faça commit/push **dos metadados** e compile o launcher:
 
 ```powershell
 powershell -File launcher/scripts/build.ps1
 ```
 
-Enviar `launcher/dist/launcher/wmu-launcher.exe` ao jogador. O endereço estável
-de atualização configurado no launcher é:
+4. Publique com o commit completo de `downloads` já enviado ao GitHub:
 
-```text
-https://github.com/worthdavi/wmu-downloads/releases/latest/download/feed.json
+```powershell
+python launcher/scripts/githubrelease.py --directory downloads/releases/client-0.1.1 --tag client-v0.1.1 --commit COMMIT_COMPLETO --notes downloads/release-notes.md --launcher launcher/dist/launcher/wmu-launcher.exe
 ```
 
-Um commit/push neste repositório registra os arquivos, mas **não publica uma
-atualização automaticamente**. O launcher consulta os anexos da última Release.
-Para as próximas atualizações, exporte a nova compilação, revise as configurações
-e repita com uma versão, tag e pasta de saída novas. Não substitua um ZIP de
-uma versão já publicada. Nesta primeira etapa, a atualização baixa o ZIP completo.
+O publicador usa seu login do Git, cria um rascunho, envia ZIP, checksum, feed
+e launcher, verifica os uploads e só então torna a Release pública/latest.
+Não substitua pacotes já publicados. Atualizações e reparos baixam o ZIP
+completo; patches incrementais ficam para outra etapa.
+
+O feed estável é:
+`https://github.com/worthdavi/wmu-downloads/releases/latest/download/feed.json`.
+Uma Release somente do launcher também deve incluir esse feed apontando ao
+ZIP imutável do client existente. O launcher atualiza o client; uma nova
+versão do próprio launcher deve ser baixada pelo link de download acima.
+
+## Recuperar o runtime em outra máquina de desenvolvimento
+
+Baixe o ZIP indicado no `feed.json` e use o SHA-256 desse mesmo feed:
+
+```powershell
+python client/scripts/releasefiles.py stage CAMINHO_DO_ZIP downloads/client/windows-x64 --platform windows-x64 --sha256 HASH_DO_FEED
+```
+
+O destino deve estar ausente. Esse comando verifica o pacote antes de
+disponibilizar o runtime para uma próxima exportação.

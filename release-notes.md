@@ -1,15 +1,16 @@
-WMU Client 0.1.0 para Windows x64.
+WMU Launcher 0.2.0 para Windows x64.
 
-- Launcher com download, verificação SHA-256, atualização e reparação do client.
-- Executável nativo, DLLs de runtime, interface e recursos de jogo incluídos.
-- 3.592 arquivos de runtime; fontes e executáveis do client legado excluídos.
-- Validados: imagens, modelos, 12 mundos, terrenos e inicialização D3D12.
+- Janela de tamanho fixo, sem barra ou botões nativos do Windows.
+- Minimizar, fechar e arrastar pelos controles do próprio launcher.
+- Seleção de servidor no rodapé: Padrão do jogo, Localhost ou Meu servidor.
+- IP/domínio, portas e certificado CA opcional salvos por computador.
+- A configuração de conexão sobrevive a atualizações e reparos.
+- Downloads concentrados em ZIPs nas Releases; branch apenas com metadados.
 
-Baixe e execute `wmu-launcher.exe`. O ZIP, o SHA-256 e `feed.json` são usados
-automaticamente pelo launcher.
+Baixe e abra `wmu-launcher.exe`. Esta Release mantém o client 0.1.0 e seu
+ZIP já publicado: não há novo download do jogo para quem já o instalou.
+O feed anexado mantém a compatibilidade com launchers anteriores.
 
-A configuração de conexão desta versão aponta a um servidor local
-(`127.0.0.1`). O download e a atualização funcionam pela internet; o login
-depende do servidor de jogo disponível no endereço configurado. Esta release
-não anuncia um servidor público de jogo. Login e gameplay online não foram
-qualificados.
+O jogo vem configurado para localhost. Para acessar outro servidor, use
+Servidor → Meu servidor. O servidor precisa estar disponível e com TLS
+configurado; login e gameplay online ainda não foram qualificados.

@@ -1,11 +1,11 @@
 /releases/
+/client/
 /.local-archive/
 **/.runtime-stage-*/
 **/.client-package-*/
 **/__pycache__/
 *.pdb
 *.obj
-!client/windows-x64/game/Data/World*/EncTerrain*.obj
 *.lib
 *.idb
 *.i64
