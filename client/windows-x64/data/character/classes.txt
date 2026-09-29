@@ -1,0 +1,49 @@
+# Character composition table: which .bmd files a class wears, and how the
+# appearance bytes are unpacked. This is data and not C++ because none of it is
+# in the files: Player.bmd carries 0 meshes and 141 actions, the equipment
+# pieces carry meshes and a bind pose only, and the rule that pairs the two
+# ("Armor" + family + two digits) lives inside main.exe. docs/71 s6-s7.
+#
+# The family suffix is the art family of the piece, not the character class -
+# a Male armour worn by a wizard still loads ArmorMale. The class -> family
+# column below is only the default set, and it is unverified against main.exe:
+# it is here so it can be corrected without a rebuild.
+#
+# Lines, one per record, '#' starts a comment:
+#
+#   dir       <client directory every piece lives in>
+#   skeleton  <client path of the animation-only model>
+#   action    idle|selected <action index in the skeleton>
+#   slot      <index> <key> <file prefix>
+#   class     <id> <key> <family> <default item index>
+#   appear    <key> <byte> <shift> <mask>
+
+dir       Player\
+skeleton  Player\Player.bmd
+
+# Action 0 is a single-key bind pose. The original male resting cycle is 1;
+# equipment-aware selection uses 2 for elves and 9/10 for flight.
+action    idle      1
+action    selected  1
+
+slot 0 helm  Helm
+slot 1 armor Armor
+slot 2 pant  Pant
+slot 3 glove Glove
+slot 4 boot  Boot
+
+class 0 darkwizard      Class 1
+class 1 darkknight      Male  1
+class 2 fairyelf        Elf   1
+class 3 magicgladiator  Male  1
+class 4 darklord        Class 1
+
+# Provisional: the 18 appearance bytes are the network module's to define, and
+# only the low nibble of each piece is read here. Whoever wires the real packet
+# rewrites these five lines, not the parser.
+appear class 0 4 0x0f
+appear helm  1 4 0x0f
+appear armor 1 0 0x0f
+appear pant  2 4 0x0f
+appear glove 2 0 0x0f
+appear boot  3 4 0x0f

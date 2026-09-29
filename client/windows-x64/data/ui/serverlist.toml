@@ -1,0 +1,173 @@
+[screen]
+components = "components.toml"
+reference = [1280, 720]
+scale = "none"
+
+[[widget]]
+name   = "background"
+anchor = "center"
+sprite = "ui/loginbackground.png"
+fit    = "cover"
+layer  = 0
+visible = false
+
+[[widget]]
+name = "wordmark"
+anchor = "center"
+offset = [0, -224]
+size = [420, 142]
+sprite = "ui/wmu-logo.png"
+fit = "contain"
+layer = 6
+
+[[widget]]
+name        = "panel"
+anchor      = "center"
+offset      = [0, 82]
+size        = [600, 330]
+layer = 2
+color = "ui_transparent"
+
+[[widget]]
+name        = "title"
+component = "title"
+parent      = "panel"
+anchor      = "top-left"
+offset = [30, 28]
+size = [540, 34]
+text        = "{entry.worldtitle}"
+textsize = 28
+textface = "display"
+textanchor  = "left"
+layer = 6
+
+[[widget]]
+name        = "worldheading"
+component = "caption"
+textsize = 17
+parent      = "panel"
+anchor      = "top-left"
+offset = [30, 82]
+size = [252, 18]
+text        = "{entry.worldheading}"
+textanchor  = "left"
+textcolor   = "ui_accent"
+tag         = "{server.count}"
+taganchor   = "right"
+tagsize     = 15
+tagcolor    = "ui_muted"
+layer = 6
+
+[[widget]]
+name        = "channelheading"
+component = "caption"
+textsize = 17
+parent      = "panel"
+anchor      = "top-left"
+offset = [302, 82]
+size = [268, 18]
+text        = "{entry.channelheading}"
+textanchor  = "left"
+textcolor   = "ui_accent"
+tag         = "{gameserver.count}"
+taganchor   = "right"
+tagsize     = 15
+tagcolor    = "ui_muted"
+layer = 6
+
+[[widget]]
+name = "titleline"
+parent = "panel"
+anchor = "top-left"
+offset = [30, 70]
+size = [540, 1]
+color = "title_rule"
+layer = 6
+
+[[list]]
+name        = "server"
+fit = "cover"
+parent      = "panel"
+source      = "servers"
+active      = "server.selected"
+max         = 5
+centered    = false
+anchor      = "top-left"
+offset = [30, 108]
+size = [252, 36]
+step        = [0, 42]
+text        = "{item}"
+textanchor  = "left"
+textoffset = [32, 0]
+tag         = "›"
+taganchor   = "right"
+tagoffset = [-28, 0]
+tagsize     = 22
+tagcolor    = "ui_accent"
+action      = "select.server"
+layer = 6
+textsize = 18
+textcolor = "ui_text"
+color = "ui_transparent"
+borderwidth = 0
+
+[[list]]
+name        = "gameserver"
+parent      = "panel"
+source      = "gameservers"
+max         = 5
+centered    = false
+anchor      = "top-left"
+offset = [302, 108]
+size = [268, 36]
+step        = [0, 42]
+text        = "{item}"
+textanchor  = "left"
+textoffset = [32, 0]
+tag         = "{item.crowd}"
+tagcolor    = "{item.crowdcolor}"
+taganchor   = "right"
+tagoffset = [-28, 0]
+tagsize = 16
+action      = "select.gameserver"
+layer = 6
+textsize = 18
+textcolor = "ui_text"
+color = "ui_transparent"
+borderwidth = 0
+
+[[widget]]
+name        = "emptytitle"
+component = "body"
+parent      = "panel"
+anchor      = "top-left"
+offset      = [302, 168]
+size        = [268, 24]
+text        = "{gameserver.emptytitle}"
+textanchor = "left"
+layer = 6
+
+[[widget]]
+name        = "emptyhint"
+component = "caption"
+textsize = 17
+parent      = "panel"
+anchor      = "top-left"
+offset      = [302, 194]
+size        = [268, 18]
+text        = "{gameserver.emptyhint}"
+textanchor = "left"
+textwrap = true
+layer = 6
+
+[[widget]]
+name = "options"
+anchor = "bottom-right"
+offset = [-40, -34]
+size = [152, 36]
+text = "{entry.options}"
+action = "options"
+layer = 6
+textsize = 18
+color = "ui_transparent"
+borderwidth = 0

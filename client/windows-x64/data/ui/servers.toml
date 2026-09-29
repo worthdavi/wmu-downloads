@@ -1,0 +1,122 @@
+# Os servidores da tela inicial. Adicionar um servidor e adicionar um bloco
+# aqui: nao existe nome de servidor em C++.
+#
+# [[server]] e o grupo que aparece na primeira tela.
+# [[gameserver]] aponta para o id de um grupo e aparece na cascata da direita.
+# "code" e o ServerCode que o ConnectServer publica. E a chave que casa este
+# arquivo com o que o servidor anuncia; sem ele vale grupo*20 + posicao.
+# "load" e a lotacao de 0 a 100. O valor daqui e a semente: a tela pergunta a
+# lista ao ConnectServer ao abrir e a cada 30 s, e o que voltar manda. O nome
+# e a lotacao passam a ser do servidor (F4:04 e F4:02), e um canal que ele nao
+# anuncia aparece como fora do ar e nao pode ser escolhido. Renomear um mundo
+# deixa de exigir recompilar o cliente.
+#
+# [directory] e o ConnectServer a quem perguntar. Sem ele vale o host e o
+# connectport do primeiro [[gameserver]].
+#
+# [[crowd]] e a escada que traduz o numero em palavra e cor. "upto" e o teto
+# INCLUSIVO do degrau e o primeiro que couber ganha, entao 45 ainda e LIVRE.
+# "label" e uma chave de data/text/en.toml (secao [app]); o que nao for chave
+# aparece como esta escrito. As cores sao nomes de data/ui/theme.toml.
+
+[directory]
+host = "127.0.0.1"
+connectport = 44405
+
+[[crowd]]
+upto  = 10
+label = "server_crowd_empty"
+color = "crowdempty"
+
+[[crowd]]
+upto  = 45
+label = "server_crowd_available"
+color = "crowdfree"
+
+[[crowd]]
+upto  = 80
+label = "server_crowd_busy"
+color = "gold"
+
+[[crowd]]
+upto  = 100
+label = "server_crowd_full"
+color = "danger"
+
+[[server]]
+id   = "global"
+name = "W::MU GLOBAL"
+artwork = "ui/worlds/global.png"
+
+[[server]]
+id   = "hard"
+name = "W::MU HARD"
+artwork = "ui/worlds/hard.png"
+
+[[server]]
+id   = "test"
+name = "TEST SERVER"
+artwork = "ui/worlds/test.png"
+
+[[gameserver]]
+server = "global"
+name   = "LORENCIA"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55901
+code   = 0
+load   = 8
+
+[[gameserver]]
+server = "global"
+name   = "NORIA"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55902
+code   = 1
+load   = 34
+
+[[gameserver]]
+server = "global"
+name   = "DEVIAS"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55903
+code   = 2
+load   = 63
+
+[[gameserver]]
+server = "global"
+name   = "ICARUS"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55904
+code   = 3
+load   = 92
+
+[[gameserver]]
+server = "hard"
+name   = "ATLANS"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55911
+code   = 20
+load   = 92
+
+[[gameserver]]
+server = "hard"
+name   = "LOST TOWER"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55912
+code   = 21
+load   = 47
+
+[[gameserver]]
+server = "test"
+name   = "LOCALHOST"
+host   = "127.0.0.1"
+connectport = 44405
+port   = 55901
+code   = 40
+load   = 0

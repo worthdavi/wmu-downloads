@@ -1,0 +1,28 @@
+# Terrain tile table: the value stored in a .map layer, and the file it names
+# inside the world's own folder. Extracted from main.exe by disassembling the
+# terrain texture loader at 0x0050E6C8-0x0050EA3E, which calls the image loader
+# with the texture id as first argument; the tile renderer at 0x004F7A99 does
+# "add eax, 0x23" on the layer value, so the stored value is id - 35.
+#
+# The extension stays as main.exe writes it: the loader falls back .jpg -> .ozj
+# and .tga -> .ozt, and a couple of worlds ship both for the same tile.
+#
+# Format: <layer value> <file>. "water <value>" marks the tile whose UVs the
+# client scrolls and shrinks (16 texels per cell instead of 64, 0x005526E0).
+
+0  TileGrass01.jpg
+1  TileGrass02.jpg
+2  TileGround01.jpg
+3  TileGround02.jpg
+4  TileGround03.jpg
+5  TileWater01.jpg
+6  TileWood01.jpg
+7  TileRock01.jpg
+8  TileRock02.jpg
+9  TileRock03.jpg
+10 TileRock04.jpg
+11 TileRock05.jpg
+12 TileRock06.jpg
+13 TileRock07.jpg
+
+water 5

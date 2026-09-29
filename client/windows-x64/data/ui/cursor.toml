@@ -1,0 +1,43 @@
+# Recortes medidos no atlas original. A ponta permanece sobre o mouse em cada estado.
+[screen]
+reference = [1280, 720]
+scale     = "fit"
+
+[[widget]]
+name       = "normal"
+sprite     = "ui/cursors/medieval.png@256"
+spriterect = [120, 78, 346, 476]
+size       = [19.2, 26.4]
+hotspot    = [0.02312, 0.01471]
+layer      = 140
+
+[[widget]]
+name       = "loot"
+sprite     = "ui/cursors/loot-original.png"
+size       = [28, 28]
+hotspot    = [0.125, 0.03125]
+layer      = 140
+
+[[widget]]
+name       = "click"
+sprite     = "ui/cursors/medieval.png@256"
+spriterect = [753, 78, 346, 476]
+size       = [19.2, 26.4]
+hotspot    = [0.02312, 0.01471]
+layer      = 140
+
+[[widget]]
+name       = "attack"
+sprite     = "ui/cursors/medieval.png@256"
+spriterect = [115, 695, 406, 451]
+size       = [21.6, 24]
+hotspot    = [0.01724, 0.01774]
+layer      = 140
+
+[[widget]]
+name       = "npc"
+sprite     = "ui/cursors/medieval.png@256"
+spriterect = [771, 760, 354, 286]
+size       = [34, 27.5]
+hotspot    = [0.01412, 0.02098]
+layer      = 140

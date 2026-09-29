@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "system": "Windows",
+  "architecture": "x64",
+  "pointer_bytes": 8,
+  "protocol": "online",
+  "configuration": "Release",
+  "compiler": "MSVC 19.44.35228.0"
+}

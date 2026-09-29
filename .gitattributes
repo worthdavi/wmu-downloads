@@ -1,0 +1,8 @@
+/client/** -text
+*.exe binary
+*.dll binary
+*.png binary
+*.bmd binary
+*.pak binary
+*.ttf binary
+*.zip binary

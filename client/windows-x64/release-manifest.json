@@ -1,0 +1,547 @@
+{
+  "schema": 1,
+  "platform": "windows-x64",
+  "version": "0.1.0-preview",
+  "files": [
+    {
+      "path": "SDL3.dll",
+      "size": 2707456,
+      "sha256": "a460fe5a639b00ea57deb6ab9c77f6d692150c95929ab92170174a370f933807",
+      "executable": false
+    },
+    {
+      "path": "assets/models/staffadmin.bmd",
+      "size": 1425876,
+      "sha256": "38b588118baff0832586d423bcd1da6aa5f63b81425c91d11b8692c0ab345de9",
+      "executable": false
+    },
+    {
+      "path": "assets/models/staffgm.bmd",
+      "size": 1426196,
+      "sha256": "f636d06c022a608f5f5615953afa8ecf56997b011476a43ae881178538869547",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/buttonmeter.png",
+      "size": 1247680,
+      "sha256": "3a1ca027afda8d87a4502950863b949a542a0c704abb62e3d9f7551139af0cf5",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/buttonplate.png",
+      "size": 1223273,
+      "sha256": "db99ca6d797cde5ec9cb1415a4aa8cc6b736536b0671bef85a39711e1d618db0",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/character-background.png",
+      "size": 2633384,
+      "sha256": "22a6992b782dfe0c1fabfcf537d1114fa246a3754bd871a6245391ae7cc697f8",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/character-pedestal.png",
+      "size": 2287169,
+      "sha256": "179986964de33fe793a0032033c94a8c4bd0254b943581d905518dbda69c030a",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/characterframe.png",
+      "size": 999422,
+      "sha256": "c5381a581fc6732225a3a9f61e65d3219544dc5c1f0805deb7130da1a980009e",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/chat/chatatlas.png",
+      "size": 1784988,
+      "sha256": "e6d7fe6216ffefb98d35049bd877b57c57ed0a5b3b8ac4b4a0cee28b6490b483",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/cursor.png",
+      "size": 694114,
+      "sha256": "ac2770cf49f86a528b627468569705438f57f5e3dd90add1cb1cb2272bf5f3e1",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/cursorclick.png",
+      "size": 728328,
+      "sha256": "a3c2955edcb5b338247b7427c8f41b5d5b758dbba72f554d6ecf685fd760087e",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/cursors/loot-original.png",
+      "size": 2209,
+      "sha256": "228811db6f9743cbddbe5f61969b29829dfd419aa99c78aec7964aa3a23443c3",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/cursors/medieval.png",
+      "size": 752069,
+      "sha256": "911ee4b8d6dc929d882e0e1ec0faee8754e1a8564c9c9b8e77c54522c228aedd",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/dragonbutton.png",
+      "size": 1009303,
+      "sha256": "766d90b6667db30b2111063fee977d45244531ed7e5a32d9ccf459707d2bb170",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/dragoncrest.png",
+      "size": 682757,
+      "sha256": "3abf2cfe83ce4e20c5802b9819660bbc1596d6dee552bf84de965d8f77878ad8",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/dragonframe.png",
+      "size": 1809890,
+      "sha256": "c05282f58b8b91b12a6e205729479456659964312c03e1a6864437f2e222ad62",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/entry-background.png",
+      "size": 2649883,
+      "sha256": "42ba2ecb790314c5e54423488d33cfe55e1e12ce604b1deed911e43c22b9a478",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/entry-button.png",
+      "size": 1349385,
+      "sha256": "17a7faffe9850f1a616f9c9fa4b1855f31e02f209605feba8043006b72c261d8",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/entry-frame.png",
+      "size": 2575698,
+      "sha256": "2a8cf08245838ae62ff35a3653ca54bf4aee0f20af9a527bb156772926e597e3",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/hud/chassis.png",
+      "size": 869844,
+      "sha256": "840062ccbd8ba58fc053750526561a5696fc945ab7b93c7e9f9c65c0c8ee58c0",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/hud/crystals.png",
+      "size": 2172110,
+      "sha256": "5954eb1229e9c35fc5d1fe0f34e04af747ba9db52ff35c6db0292529829b4311",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/hud/icons.png",
+      "size": 1125252,
+      "sha256": "2bb03cb85ece870d547b33f31c6f8c7d18bbccb665f0913d86d665ba96a10c2a",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/loginbackground-restored.png",
+      "size": 2679352,
+      "sha256": "b94bc283deade12bad099137f5772f332289128b975a586d2e04495217353c77",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/loginbackground.png",
+      "size": 2525654,
+      "sha256": "9351a4298f2b5822413811acba88c992f77a1fe675d326d813a7f64e7f8fe29d",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/loginframe.png",
+      "size": 2530210,
+      "sha256": "536af41f8949d1fd48ee33c8e81fc7ef60d249ba9d28d0c14fa154e07db57404",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/menus/interactionatlas.png",
+      "size": 2130443,
+      "sha256": "4017a6fb0e6e9c6e31ed0b16fc76dd994effedbcd290e213af2b8519e2e080bc",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/menus/menuatlas.png",
+      "size": 1887474,
+      "sha256": "362db8c278c42730dec679808f88a9735a2e02d18fc671e309b25da772c1dc1b",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/skills/skills.png",
+      "size": 3779940,
+      "sha256": "1b35cef2b41dbd5b1db24b40284e1ae44c1548b478f356be2839718acaddf3a1",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/staffbadges.png",
+      "size": 1368366,
+      "sha256": "c93f8e40893d60ceff199f4aed51aec32db6efdd92240474fcfca8bcf084c313",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/windows/characterselection.png",
+      "size": 1628134,
+      "sha256": "839f581c76b84e2d1af36514d68ae414f48ce624bb7a4f43414bf95d491e9475",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/windows/dragonframes.png",
+      "size": 1504585,
+      "sha256": "0d441791318f1f1d5138d5f764d77e57809807bcf40030e2fda85af8bf098533",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/windows/inventoryatlas.png",
+      "size": 2616434,
+      "sha256": "f7ba22a23fc35b477f6a882f39839996d4e7cc7f539b6fa7c97679e05a174902",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/windows/windowframes.png",
+      "size": 2070714,
+      "sha256": "e19742cb4fa05c442f425502c6f392b16e7371409b20dec38f220ad0fb16c135",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/wmu-logo.png",
+      "size": 1423105,
+      "sha256": "f736c5d284ddd8ec535da9d31054364b69e24798a3da22c05c5c39a43af2d609",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/worlds/global.png",
+      "size": 1971531,
+      "sha256": "eb08d370277a1446fcb22101c5a39f16eff1970dafa52cd8fe86eea59a828b1f",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/worlds/hard.png",
+      "size": 1693171,
+      "sha256": "0d97a6adf43556082a4ecfc6e924622827267cff84ed1ead8a151cef71c66d20",
+      "executable": false
+    },
+    {
+      "path": "assets/ui/worlds/test.png",
+      "size": 1660067,
+      "sha256": "6ec1a2019fd3bc23ae77a8afc116858d0772b6e56104dc8cd786e3c0f4c7fca8",
+      "executable": false
+    },
+    {
+      "path": "build-info.json",
+      "size": 194,
+      "sha256": "bd548119ab2fa0690a03a68127ead4321cd6a2a882b076f08b54c9bb93a5c3f5",
+      "executable": false
+    },
+    {
+      "path": "client.toml",
+      "size": 5234,
+      "sha256": "c5729f80ee2d342c1a52e4f194812e02e6cd303c75d28e75f9b1e14068e422ab",
+      "executable": false
+    },
+    {
+      "path": "concrt140.dll",
+      "size": 324208,
+      "sha256": "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376",
+      "executable": false
+    },
+    {
+      "path": "data/audio/itemcues.toml",
+      "size": 2451,
+      "sha256": "da8a8d02681f0186ee6e77d1083269c401cdc786b7f8ae0a249a19b5ad737a07",
+      "executable": false
+    },
+    {
+      "path": "data/audio/npccues.toml",
+      "size": 2035,
+      "sha256": "3c90a32acfd4badb08fb413d115da984678341ab884352cc4f1c1413a4fb55c3",
+      "executable": false
+    },
+    {
+      "path": "data/audio/worldcues.toml",
+      "size": 2709,
+      "sha256": "d66e13b7914502dff761654f4b12f774f841640a739c8f4e789c8e765d4f3830",
+      "executable": false
+    },
+    {
+      "path": "data/character/classes.txt",
+      "size": 1901,
+      "sha256": "d820ecd11f05d42d86945bac58c966c6965a8a6a66aec598b98a6b37ebac9b00",
+      "executable": false
+    },
+    {
+      "path": "data/item/items.dat",
+      "size": 31800,
+      "sha256": "5b2aa1b10d70c2403fca6c3778dc359f5f41d4ae053454400e74a636df8edd9c",
+      "executable": false
+    },
+    {
+      "path": "data/licenses/pugixml.txt",
+      "size": 1103,
+      "sha256": "f58038b9e590ae1c2157440ecd165479c895fdcc1d7f5b1c68af775b74d14a2b",
+      "executable": false
+    },
+    {
+      "path": "data/network/ca.pem",
+      "size": 3040,
+      "sha256": "a627ad8d5b142d325e18d90a49ce9f1b840cdc8f191122d20d5f36fdfcf18d22",
+      "executable": false
+    },
+    {
+      "path": "data/text/en.toml",
+      "size": 41027,
+      "sha256": "28bf12187609e9ca30eb36a10fd7d0c4b8a098c0429e58e64a2fa80a08081507",
+      "executable": false
+    },
+    {
+      "path": "data/text/pt-br.toml",
+      "size": 41734,
+      "sha256": "404f14535d54999ef3bdaf72c46b6b3f1d2a9e205bbc974ca9dc3e568163bebd",
+      "executable": false
+    },
+    {
+      "path": "data/ui/characterselect.toml",
+      "size": 4624,
+      "sha256": "cd30489b8d75b247d47bdd1f5b068a335a55a3f3ec95683755b90604ea59c447",
+      "executable": false
+    },
+    {
+      "path": "data/ui/components.toml",
+      "size": 2718,
+      "sha256": "448d9e5b37eec71b123d6d8568789654e9c3701804f40b59038a1f9ed6a7e97f",
+      "executable": false
+    },
+    {
+      "path": "data/ui/cursor.toml",
+      "size": 1059,
+      "sha256": "b4dc80348710b3a28b0ac444d27f071fdf82d90d5c98c561b32dc5678ec8b740",
+      "executable": false
+    },
+    {
+      "path": "data/ui/display-license.md",
+      "size": 4580,
+      "sha256": "c583f9012913da9681498aff054585fe2e1efb3ff1bcac0a191059850ef3e089",
+      "executable": false
+    },
+    {
+      "path": "data/ui/display-source.md",
+      "size": 575,
+      "sha256": "b0f8553be051fa1c098654c4b23dafcea25d5f2c63edff55a67dd0605249c47d",
+      "executable": false
+    },
+    {
+      "path": "data/ui/display.ttf",
+      "size": 68768,
+      "sha256": "0c23ec565db45c5508ee95889c60ad87debd167ca07167a43a5d68572b4e2eac",
+      "executable": false
+    },
+    {
+      "path": "data/ui/font-license.md",
+      "size": 4579,
+      "sha256": "5d8778c6a43dc2fee25e81ee6ff07e52c6f238473b491cda47f7117a2ce9d467",
+      "executable": false
+    },
+    {
+      "path": "data/ui/font-source.md",
+      "size": 391,
+      "sha256": "7293964b073234a30fd4980f5c1e410eee8248b3f5e8ed7469cbd1521835ba3f",
+      "executable": false
+    },
+    {
+      "path": "data/ui/font.ttf",
+      "size": 425904,
+      "sha256": "a3f4f8dcf343a8f24dc61951de93f3ba1558b15cd250ba24af8a40e957081b7d",
+      "executable": false
+    },
+    {
+      "path": "data/ui/game.toml",
+      "size": 5136,
+      "sha256": "7b9715ae5cfa6f22beb84deed35097962f828d4ced1771d6cb8b8156e894bb97",
+      "executable": false
+    },
+    {
+      "path": "data/ui/ingamemenu.toml",
+      "size": 1888,
+      "sha256": "227c5612b7ed41a02190c9c83e34642a1cb3276da8fb41c4990051fa1c87f32e",
+      "executable": false
+    },
+    {
+      "path": "data/ui/ingameoptions.toml",
+      "size": 4187,
+      "sha256": "29771830a482cadb41348529712373f825db8411923da799659790c1d7e577d2",
+      "executable": false
+    },
+    {
+      "path": "data/ui/ingameoptionssound.toml",
+      "size": 2601,
+      "sha256": "dfe83e81c9a4dfd1de6674ac5e24be6b3272d1adc39f6cebf3783c4fddc87cf4",
+      "executable": false
+    },
+    {
+      "path": "data/ui/login.toml",
+      "size": 3323,
+      "sha256": "be022b14c024fd62f54ae3387049102536863eeb38f065471d15de583e5859a3",
+      "executable": false
+    },
+    {
+      "path": "data/ui/options.toml",
+      "size": 4612,
+      "sha256": "23bc3ae49afc1f4baa5d95bf1459ddbf22e72095e94e3d79bd85a6a473f91544",
+      "executable": false
+    },
+    {
+      "path": "data/ui/optionssound.toml",
+      "size": 2754,
+      "sha256": "d23f231b25d6c982486c57c9e6203486b87326dff0478f4d232b5d23ca413c1b",
+      "executable": false
+    },
+    {
+      "path": "data/ui/serverlist.toml",
+      "size": 3456,
+      "sha256": "ff31e3270f10238f9a8446125ec704b4a5f61fffdbdc14b7dafe6e121c9b5cd4",
+      "executable": false
+    },
+    {
+      "path": "data/ui/servers.toml",
+      "size": 2792,
+      "sha256": "43bb6dd86f1c3c1cb8c31d3c5944473865ae012e06f951948ceec00afcea4b73",
+      "executable": false
+    },
+    {
+      "path": "data/ui/theme.toml",
+      "size": 5797,
+      "sha256": "b79990de9b26a52a26deae6307e32c39cd783b97a26ae1707b7edfcba05bba0b",
+      "executable": false
+    },
+    {
+      "path": "data/ui/title.toml",
+      "size": 839,
+      "sha256": "67472580a12b06eb870b4763220ea3ba1e55959993cf28d9c24e6b6f742ce8cd",
+      "executable": false
+    },
+    {
+      "path": "data/world/blend.txt",
+      "size": 4884,
+      "sha256": "5b0ce6ed0840bea04ee1105a3d0bd40e8c91fb6426018a21ed6f01dacb01a625",
+      "executable": false
+    },
+    {
+      "path": "data/world/gates.toml",
+      "size": 3792,
+      "sha256": "5ce3fdb900cba64e7d013e18ec210af31655aa877174224cd572f018c8e8c61f",
+      "executable": false
+    },
+    {
+      "path": "data/world/mapaudio.toml",
+      "size": 3791,
+      "sha256": "287633a8e4f11555b8278f38e5f4a1bb373558ccf66142c73c0a98d8cbf0e9c5",
+      "executable": false
+    },
+    {
+      "path": "data/world/object1.txt",
+      "size": 2264,
+      "sha256": "d13012223624d0df6a05da40455d8564ec972dee892ba55627f004b558183ed5",
+      "executable": false
+    },
+    {
+      "path": "data/world/sky.toml",
+      "size": 2544,
+      "sha256": "a69186f6bdd7b4c615c45742c1d19aa071d20e4f20d8004c5dbb8f61890e5c94",
+      "executable": false
+    },
+    {
+      "path": "data/world/tile.txt",
+      "size": 993,
+      "sha256": "de778ca3fe8254962468d3a1ed2220b9fb6473463d0d87f2a1b60f540916c774",
+      "executable": false
+    },
+    {
+      "path": "keys.toml",
+      "size": 2903,
+      "sha256": "0eb3bae1068e0211ccc402776777dbcf432cf6eba317356b22742485d1272e14",
+      "executable": false
+    },
+    {
+      "path": "licenses/asio.txt",
+      "size": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "executable": false
+    },
+    {
+      "path": "licenses/msgpack.txt",
+      "size": 200,
+      "sha256": "664550b43996452a5a2c7471bb0ff77185a58c69ccafa60f983dc4c162e1ee22",
+      "executable": false
+    },
+    {
+      "path": "licenses/openssl.txt",
+      "size": 10175,
+      "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+      "executable": false
+    },
+    {
+      "path": "licenses/pugixml.txt",
+      "size": 1079,
+      "sha256": "90974fbb120e966b452654eaae3ba6ee55f3647db3b28918a7649733ee99da97",
+      "executable": false
+    },
+    {
+      "path": "licenses/sdl.txt",
+      "size": 902,
+      "sha256": "f4c406cd23df8e2ea3e8bb1af62f15cb6b2439e4e5385828cf90301baea4d944",
+      "executable": false
+    },
+    {
+      "path": "msvcp140.dll",
+      "size": 557728,
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9",
+      "executable": false
+    },
+    {
+      "path": "msvcp140_1.dll",
+      "size": 35952,
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d",
+      "executable": false
+    },
+    {
+      "path": "msvcp140_2.dll",
+      "size": 280200,
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9",
+      "executable": false
+    },
+    {
+      "path": "msvcp140_atomic_wait.dll",
+      "size": 50304,
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479",
+      "executable": false
+    },
+    {
+      "path": "msvcp140_codecvt_ids.dll",
+      "size": 31872,
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18",
+      "executable": false
+    },
+    {
+      "path": "readme.txt",
+      "size": 1179,
+      "sha256": "4d75e0527a0c3fdb4e6cd951ade144fe3da3635e6b547f4c530891373d35e1b3",
+      "executable": false
+    },
+    {
+      "path": "vcruntime140.dll",
+      "size": 124544,
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+      "executable": false
+    },
+    {
+      "path": "vcruntime140_1.dll",
+      "size": 49792,
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+      "executable": false
+    },
+    {
+      "path": "wmu.exe",
+      "size": 10382848,
+      "sha256": "030c0fb66476d9def1092672a58cb2f2c24a3749543ac6b18d400222c74e3d76",
+      "executable": true
+    }
+  ]
+}

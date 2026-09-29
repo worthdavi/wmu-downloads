@@ -1,0 +1,270 @@
+[screen]
+components = "components.toml"
+reference = [1280, 720]
+scale = "fit"
+
+[[widget]]
+name = "characters"
+component = "primary"
+anchor = "top-right"
+offset = [-144, 24]
+size = [146, 32]
+textsize = 15
+text = "{game.characterslabel}"
+action = "game.characters"
+layer = 3
+visible = false
+
+[[widget]]
+name = "options"
+component = "primary"
+anchor = "top-right"
+offset = [-24, 24]
+size = [110, 32]
+textsize = 15
+text = "{game.optionslabel}"
+action = "game.options"
+layer = 3
+visible = false
+
+[[widget]]
+name = "vitals"
+component = "card"
+anchor = "bottom-center"
+offset = [0, -36]
+size = [456, 80]
+radius = 12
+layer = 2
+spriteborderscale = 0.075
+visible = false
+
+[[widget]]
+name = "life"
+component = "caption"
+parent = "vitals"
+anchor = "top-left"
+offset = [20, 15]
+size = [196, 46]
+text = "{game.lifelabel}"
+textanchor = "top-left"
+textcolor = "ui_text"
+tag = "{game.life}"
+taganchor = "top-right"
+tagsize = 15
+tagcolor = "ui_muted"
+meter = "{game.lifepercent}"
+metercolor = "ui_danger"
+metertrack = [0.0, 0.8, 1.0, 0.1]
+layer = 3
+
+[[widget]]
+name = "mana"
+component = "caption"
+parent = "vitals"
+anchor = "top-right"
+offset = [-20, 15]
+size = [196, 46]
+text = "{game.manalabel}"
+textanchor = "top-left"
+textcolor = "ui_text"
+tag = "{game.mana}"
+taganchor = "top-right"
+tagsize = 15
+tagcolor = "ui_muted"
+meter = "{game.manapercent}"
+metercolor = "ui_mana"
+metertrack = [0.0, 0.8, 1.0, 0.1]
+layer = 3
+
+[[widget]]
+name = "status"
+component = "caption"
+anchor = "top-center"
+offset = [0, 112]
+size = [520, 46]
+text = "{game.status}"
+textcolor = "ui_text"
+textshadow = true
+layer = 180
+visiblewhen = "{game.status}"
+textsize = 18
+textanchor = "center"
+textoffset = [0, 0]
+
+[[widget]]
+name = "hint"
+component = "caption"
+anchor = "bottom-center"
+offset = [0, -8]
+size = [620, 22]
+text = ""
+textshadow = true
+layer = 3
+visible = false
+
+
+[[widget]]
+name = "gamepanelveil"
+visiblewhen = "{game.panel}"
+anchor = "center"
+color = "ui_gameveil"
+layer = 50
+
+[[widget]]
+name = "gamepanel"
+visiblewhen = "{game.panel}"
+anchor = "center"
+offset = [0, -52]
+size = [560, 492]
+color = "ui_notice"
+bordercolor = "ui_ornament_border"
+borderwidth = 1
+radius = 8
+layer = 51
+
+[[widget]]
+name = "gamepaneltitle"
+parent = "gamepanel"
+anchor = "top-left"
+offset = [24, 20]
+size = [460, 36]
+text = "{game.paneltitle}"
+textanchor = "left"
+textsize = 28
+textcolor = "ui_accent"
+layer = 52
+
+[[widget]]
+name = "gamepanelclose"
+parent = "gamepanel"
+anchor = "top-right"
+offset = [-16, 16]
+size = [42, 36]
+text = "×"
+textsize = 28
+textcolor = "ui_text"
+color = "ui_steel"
+hovercolor = "ui_surface_hover"
+radius = 4
+action = "game.panel.close"
+layer = 53
+
+[[widget]]
+name = "gamepanelbody"
+parent = "gamepanel"
+anchor = "top-left"
+offset = [24, 63]
+size = [512, 324]
+text = "{game.panelbody}"
+textanchor = "top-left"
+textsize = 20
+textwrap = true
+textcolor = "ui_text"
+layer = 52
+
+[[list]]
+name = "inventoryrow"
+parent = "gamepanel"
+visiblewhen = "{game.inventoryvisible}"
+source = "game.inventory"
+max = 8
+anchor = "top-left"
+offset = [24, 96]
+size = [512, 36]
+step = [0, 39]
+color = "{item.tint}"
+hovercolor = "ui_surface_hover"
+bordercolor = "{item.border}"
+borderwidth = 1
+radius = 3
+text = "{item}"
+textanchor = "left"
+textoffset = [12, 0]
+textsize = 17
+textcolor = "ui_text"
+tag = "{item.detail}"
+taganchor = "right"
+tagoffset = [-12, 0]
+tagsize = 14
+tagcolor = "ui_muted"
+action = "game.inventory.select.{item.slot}"
+layer = 53
+
+[[list]]
+name = "skillrow"
+parent = "gamepanel"
+visiblewhen = "{game.skillsvisible}"
+source = "game.skills"
+max = 8
+anchor = "top-left"
+offset = [24, 96]
+size = [512, 36]
+step = [0, 39]
+color = "{item.tint}"
+hovercolor = "ui_surface_hover"
+bordercolor = "{item.border}"
+borderwidth = 1
+radius = 3
+text = "{item}"
+textanchor = "left"
+textoffset = [12, 0]
+textsize = 17
+textcolor = "ui_text"
+tag = "{item.detail}"
+taganchor = "right"
+tagoffset = [-12, 0]
+tagsize = 14
+tagcolor = "ui_muted"
+action = "game.skills.select.{item.id}"
+layer = 53
+
+[[widget]]
+name = "gamepanelhint"
+parent = "gamepanel"
+anchor = "bottom-center"
+offset = [0, -43]
+size = [512, 42]
+text = "{game.panelhint}"
+textsize = 16
+textwrap = true
+textcolor = "ui_accent"
+layer = 54
+
+[[widget]]
+name = "gamepanelprevious"
+parent = "gamepanel"
+visiblewhen = "{game.panelpaginated}"
+anchor = "bottom-left"
+offset = [24, -10]
+size = [72, 30]
+text = "‹"
+textsize = 24
+textcolor = "ui_text"
+color = "ui_steel"
+action = "game.panel.previous"
+layer = 54
+
+[[widget]]
+name = "gamepanelpage"
+parent = "gamepanel"
+anchor = "bottom-center"
+offset = [0, -10]
+size = [220, 30]
+text = "{game.panelpage}"
+textsize = 16
+textcolor = "ui_muted"
+layer = 54
+
+[[widget]]
+name = "gamepanelnext"
+parent = "gamepanel"
+visiblewhen = "{game.panelpaginated}"
+anchor = "bottom-right"
+offset = [-24, -10]
+size = [72, 30]
+text = "›"
+textsize = 24
+textcolor = "ui_text"
+color = "ui_steel"
+action = "game.panel.next"
+layer = 54
