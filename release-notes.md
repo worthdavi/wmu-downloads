@@ -1,15 +1,17 @@
-WMU Client 0.4.0 para Windows x64.
+WMU Client 0.5.0 para Windows x64.
 
-- Sincronização incremental do mundo, reduzindo o tráfego durante o jogo.
-- Autosave distribuído sem interromper movimento e combate.
-- Recompensas de eventos persistentes, com proteção contra entrega duplicada.
-- Correção do teleporte e atualização do inventário após serviços e recompensas.
-- Preparação da API de conteúdo Lua; a quest e o NPC de exemplo foram removidos.
+- Login e seleção de personagem com menos viagens de rede.
+- Tela de carregamento apresentada antes de preparar o mundo.
+- Dark Reign Blade corrigida para duas mãos e atributos de armas revisados.
+- Quantidade de Zen visível nas pilhas no chão.
+- Servidor com progressão clássica moderada, novos drops e spots revisados.
+- Loot próprio por monstro e por área, configurado em YAML no servidor.
 
 Feche o jogo e reabra o launcher existente para atualizar automaticamente.
-Esta versão acompanha o servidor atualizado em server.wmu.life e exige o novo
-contrato de sincronização. O executável do launcher permanece o mesmo.
+Esta versão acompanha o servidor atualizado em server.wmu.life. O executável
+do launcher permanece o mesmo.
 
 Pacote Release x64 para jogadores, com manifesto e SHA-256, sem código-fonte,
 testes ou console de debug. Os 3.502 arquivos originais do jogo foram preservados.
-Os 26 assets customizados MuAwaY ausentes anteriormente continuam pendentes.
+Os 26 assets customizados MuAwaY ausentes anteriormente continuam pendentes;
+esses equipamentos foram excluídos dos novos drops normais.
