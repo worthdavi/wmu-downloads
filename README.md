@@ -19,7 +19,7 @@ para um clone novo sem os antigos binários, use `git clone --depth 1`.
 
 O runtime inclui `wmu.exe`, DLLs necessárias, `client.toml`, `keys.toml`,
 `assets/`, `data/`, `game/Data/`, `licenses/` e `release-manifest.json`.
-São 3.592 arquivos na versão 0.2.2. Código-fonte, ferramentas, arquivos de
+São 3.592 arquivos na versão 0.2.3. Código-fonte, ferramentas, arquivos de
 autoria, símbolos de depuração e executáveis legados não entram no ZIP.
 
 O client é uma compilação Release x64 com subsistema gráfico Windows:
@@ -38,7 +38,7 @@ A escolha persiste em `%LOCALAPPDATA%/WMU/server-settings.json`, sobrevive a
 atualizações/reparo e vale na próxima abertura do jogo. Os canais preservam
 seus deslocamentos de porta. O servidor precisa estar acessível e anunciar
 endereços corretos; o launcher não cria um servidor de jogo. A validação TLS
-permanece ativa. O client 0.2.2 usa o protocolo WMU3 e requer o servidor Go;
+permanece ativa. O client 0.2.3 usa o protocolo WMU3 e requer o servidor Go;
 o launcher existente baixa essa atualização automaticamente pela Release latest.
 
 Login, personagens, movimentação, renderização de Lorencia, HUD, comércio,
@@ -56,9 +56,9 @@ No workspace privado `wmu`, com Python 3.11+:
 2. Gere manifesto e ZIP com uma versão e tag novas:
 
 ```powershell
-python client/scripts/releasefiles.py create downloads/client/windows-x64 --platform windows-x64 --version 0.2.2
-python launcher/scripts/packageclient.py --version 0.2.2 --release-url https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.2.2 --output downloads/releases/client-0.2.2
-Copy-Item downloads/releases/client-0.2.2/feed.json downloads/feed.json
+python client/scripts/releasefiles.py create downloads/client/windows-x64 --platform windows-x64 --version 0.2.3
+python launcher/scripts/packageclient.py --version 0.2.3 --release-url https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.2.3 --output downloads/releases/client-0.2.3
+Copy-Item downloads/releases/client-0.2.3/feed.json downloads/feed.json
 ```
 
 Use `--allow-local-server` no empacotador para distribuir intencionalmente
@@ -73,7 +73,7 @@ powershell -File launcher/scripts/build.ps1
 4. Publique com o commit completo de `downloads` já enviado ao GitHub:
 
 ```powershell
-python launcher/scripts/githubrelease.py --directory downloads/releases/client-0.2.2 --tag client-v0.2.2 --commit COMMIT_COMPLETO --notes downloads/release-notes.md --launcher launcher/dist/launcher/wmu-launcher.exe
+python launcher/scripts/githubrelease.py --directory downloads/releases/client-0.2.3 --tag client-v0.2.3 --commit COMMIT_COMPLETO --notes downloads/release-notes.md --launcher launcher/dist/launcher/wmu-launcher.exe
 ```
 
 O publicador usa seu login do Git, cria um rascunho, envia ZIP, checksum, feed

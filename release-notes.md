@@ -1,15 +1,20 @@
-WMU Client 0.2.2 para Windows x64.
+WMU Client 0.2.3 para Windows x64.
 
-- Corrige as pernas e botas parcialmente invisíveis do set Hurricane do MG.
-- Restaura a velocidade de caminhada, corrida, asas e montarias.
-- Sincroniza a previsão do client com as regras de movimento do servidor Go.
-- Preserva as correções de teleporte pelo M, Triple Shot e outras magias.
+- Corrige itens sobrepostos nas lojas e a compra pela posição correta da grade.
+- Restaura a contagem de saída começando em 5 segundos.
+- Corrige respostas de NPCs recusadas e falhas ao renomear o baú.
+- Corrige o bloqueio e desbloqueio por PIN do baú e remove o campo pessoal sem uso.
+- Melhora a confirmação de movimentação de itens e a organização da mochila
+  com o baú aberto.
+- Corrige desmarcar pronto, o limite de Zen e falhas de persistência nas trocas.
+- Permite usar Bless, Soul e Life em itens equipados e mostra o motivo de recusas.
+- Preserva o nível das magias aprendidas por livros e valida a energia necessária.
+- Corrige requisitos de vitalidade na interface de equipamentos.
+- Valida consumo de poções, maçãs, antídotos e frutas, inclusive após reconectar.
 
-Feche o jogo e abra o launcher novamente ou use Procurar atualizações.
-O client será atualizado automaticamente; não precisa baixar outro launcher.
-O servidor público continua em server.wmu.life.
+Feche o jogo e reabra o launcher. A atualização é automática; o launcher
+existente continua válido. Servidor: server.wmu.life.
 
-O pacote contém somente o client Release x64 e os arquivos para executá-lo,
-com manifesto e SHA-256 verificados. Não inclui código-fonte nem testes.
-Os assets existentes foram preservados. Os 26 assets customizados MuAwaY
-que já estavam ausentes continuam pendentes.
+Pacote Release x64 para jogadores, com manifesto e SHA-256. Sem código-fonte,
+testes ou console de debug. Os assets originais foram preservados.
+Os 26 assets customizados MuAwaY ausentes anteriormente continuam pendentes.
