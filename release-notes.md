@@ -1,20 +1,15 @@
-WMU Client 0.2.1 para Windows x64.
+WMU Client 0.2.2 para Windows x64.
 
-- Corrige o teleporte pelo menu M e os comandos com barra.
-- Confirma o destino, cobra o zen correto e reinicia a caminhada após teleportar.
-- Melhora a continuidade da caminhada sob latência, mantendo a velocidade
-  controlada pelo servidor e até três passos previstos.
-- Restaura os projéteis de Triple Shot da Greatrain Crossbow da Elf.
-- Corrige a apresentação de Fire Slash e outras magias pelo protocolo WMU3.
+- Corrige as pernas e botas parcialmente invisíveis do set Hurricane do MG.
+- Restaura a velocidade de caminhada, corrida, asas e montarias.
+- Sincroniza a previsão do client com as regras de movimento do servidor Go.
+- Preserva as correções de teleporte pelo M, Triple Shot e outras magias.
 
-Abra o launcher novamente ou use Procurar atualizações. O client será
-atualizado automaticamente; não é necessário baixar outro launcher.
+Feche o jogo e abra o launcher novamente ou use Procurar atualizações.
+O client será atualizado automaticamente; não precisa baixar outro launcher.
 O servidor público continua em server.wmu.life.
 
-O pacote contém somente o client Release x64 e seus arquivos de execução,
-com manifesto e SHA-256 verificados. Não inclui código-fonte ou testes.
-Os assets existentes foram preservados.
-
-A posição do MG em Lorencia foi verificada com os equipamentos atuais,
-mas o afundamento relatado não foi reproduzido e não é declarado corrigido.
-Os 26 assets customizados MuAwaY ausentes anteriormente continuam pendentes.
+O pacote contém somente o client Release x64 e os arquivos para executá-lo,
+com manifesto e SHA-256 verificados. Não inclui código-fonte nem testes.
+Os assets existentes foram preservados. Os 26 assets customizados MuAwaY
+que já estavam ausentes continuam pendentes.
