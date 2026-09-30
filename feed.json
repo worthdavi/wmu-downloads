@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "version": "0.5.0",
-  "archiveUrl": "https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.5.0/wmu-client-0.5.0-windows-x64.zip",
-  "archiveSha256": "6b72a9d1f7a896eaba3a7ccdedb881b3f311d045f4b0e265f1d9b40b05a447a7",
-  "archiveSize": 191583612,
+  "version": "0.6.0",
+  "archiveUrl": "https://github.com/worthdavi/wmu-downloads/releases/download/client-v0.6.0/wmu-client-0.6.0-windows-x64.zip",
+  "archiveSha256": "6e47155d7b09efbfef449ddb0d5c1066751c3adc81b0bee8875a4359bf61fe6c",
+  "archiveSize": 191607899,
   "entryPoint": "wmu.exe",
   "arguments": [
     "--game-path",
